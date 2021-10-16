@@ -87,7 +87,7 @@ def get_scatter_chart(site_dropdown, payload):
                             title='Payload vs. Outcome for All Sites')
         return fig
     else:
-        _df1 = filtered_df[filtered_df['Launch Site']==site_dropdown]
+        filtered_df1 = filtered_df[filtered_df['Launch Site']==site_dropdown]
         fig = px.scatter(filtered_df1, x='Payload Mass (kg)', y='class',
                             color='Booster Version Category',
                             title='Payload and Booster Versions for site')
